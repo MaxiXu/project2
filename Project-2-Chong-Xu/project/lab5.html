@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Project-Lab1</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		    <style>
+		      .icons{
+		      font-family: 'Oswald', sans-serif;
+		      font-size:15px;
+		      }
+					.heart{text-align: center;}
+				</style>
+	</head>
+	<body class="is-loading">
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">CHONG XU</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+              <li><a href="lab1.html">lab 1</a></li>
+							<li><a href="lab2.html">Lab 2</a></li>
+							<li><a href="lab3.html">lab 3</a></li>
+							<li><a href="lab4.html">lab 4</a></li>
+							<li class="active"><a href="lab5.html">Lab 5</a></li>
+							<li><a href="lab6.html">lab 6</a></li>
+							<li><a href="lab7.html">lab 7</a></li>
+							<li><a href="lab8.html">lab 8</a></li>
+						</ul>
+							<ul class="icons">
+							      <li><a href="../index.html"><span class="label">Home</span></a></li>
+										<li><a href="../projects.html"><span class="label">Projects</span></a></li>
+										<li><a href="../artworks.html">Art Works</a></li>
+										<li><a href="../about.html">About Me</a></li>
+										<li><a href="../contact.html">Contact</a></li>
+									</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">CHONG XU</span>
+									<h1>LAB 5<br />
+									JQuery Animations</h1>
+									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
+									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
+									amet nullam sed etiam veroeros.</p>
+								</header>
+								<div class="image main"><img src="" alt=""/>
+									<div id="divv"><img src="images/lab5.png"/>
+
+									<style>
+									#divv{
+										width: 200px;
+									height: 200px;
+									background-color: #FA6900;
+									position: relative;
+									text-align:center;
+									margin:0 auto;
+									}
+									</style>
+									</div>
+									<br/>
+									<ul class="icons alt" style="text-align: center;">
+										<li><button class="button" onclick="move()">Move it!</button></li>
+									<li><button  class="button" onclick="opa()">Change Opacity!</button></li>
+									<li><button class="button" onclick="cir()">Into a Circle!</button></li>
+									<li><button class="button" onclick="siz()">Change the Size!</button></li>
+									 <li><button  class="button" onclick="craz()">Lets Get CRAZY!!!</button></li>
+										</ul>
+
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+						<footer id="footer">
+							<section class="heart">
+		  				<h3>Hope You Enjoy Today On My Webside. <i class="icon alt fa-heart"></i></h3>
+							<P>Know more about me and let me know more about you, feel free to <a target="_blank" href="../contact.html">Contact Me</a>. I will contact you soon. Thank you so much. </p>
+
+							</section>
+							<section class="split contact" style="text-align: center;">
+								<section>
+									<ul class="icons alt">
+										<li><a target="_blank" href="https://twitter.com/cara_hsu" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a target="_blank"  href="https://www.facebook.com/profile.php?id=100010309506207" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a target="_blank" href="https://www.instagram.com/maxi_hsu/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a target="_blank" href="https://github.com/MaxiXu" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+										<li><a target="_blank" href="https://www.linkedin.com/in/chong-xu-2b1091136/" class="icon alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</section>
+							</section>
+						</footer>
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul>
+							<li>Copyright&copy; Chong Xu 2017All Rights Reserved.</li>
+						</ul>
+					</div>
+			</div>
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+
+		$("#divv")
+		.slideUp(2000)
+		.slideDown(2000);
+
+		function move(){
+		  $("#divv").animate({left:"+=300px"},300);
+		  $("#divv").animate({left:"+=100px"},500);
+		  $("#divv").animate({left:"-=800px"},300);
+			$("#divv").animate({left:"+=400px"},300);
+		  $("#divv").animate({top:"+=100px"},300);
+		  $("#divv").animate({top:"-=100px"},500);
+		};
+		function opa(){
+			//alert("text");
+			$("#divv").animate(
+			{opacity:"0.5"},1000);
+			$("#divv").animate({opacity:"1"},500);
+			$("#divv").animate({opacity:"0.3"}, 300);
+			$("#divv").animate({opacity:"0.1"}, 500);
+			$("#divv").animate({opacity:"1"}, 300);
+		};
+		function cir()
+		{$("#divv").animate({borderRadius: 20},500);
+		$("#divv").animate({borderRadius: 80},300);
+		$("#divv").animate({borderRadius: 100},300);
+		$("#divv").animate({borderRadius: 0},500);
+		};
+		function siz()
+		{$("#divv").animate({height:"+=50px"},300);
+		$("#divv").animate({width:"+=50px"},300);
+		$("#divv").animate({height:"-=50px"},300);
+		$("#divv").animate({width:"-=50px"},300);
+		};
+		function craz()
+		{$("#divv").animate({left:"+=100px"},500);
+		$("#divv").animate({left:"-=100px"},300);
+		$("#divv").animate({opacity:"0.3"}, 300);
+		$("#divv").animate({opacity:"0.1"}, 500);
+		$("#divv").animate({opacity:"1"}, 500);
+		$("#divv").animate({width:"+=50px"},300);
+		$("#divv").animate({width:"-=50px"},300);
+		$("#divv").animate({height:"-=50px"},300);
+		$("#divv").animate({height:"+=50px"},1000);
+		$("#divv").animate({borderRadius: 100},300);
+		$("#divv").animate({borderRadius: 0},500);
+		};
+		</script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,31 @@
+body{
+
+    margin:0 auto;
+    text-align: center;
+}
+
+dl {
+
+}
+
+dd {
+    margin: 0;
+    padding: 1em 0;
+    
+
+}
+
+dt {
+    cursor: pointer;
+
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 2em;
+    background:#73C6B6;
+    border-bottom: 2px solid #0E6655;
+    border-top: 1px solid white;
+}
+
+dt:first-child { border-top: none; }
+dt:nth-last-child(2) { border-bottom: none; }
+.hide {display: none;}

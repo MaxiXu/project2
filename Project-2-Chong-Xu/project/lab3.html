@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Project-Lab1</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu" rel="stylesheet"> <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <style>
+		    <style>
+				.t1 {font-family: 'Ubuntu', sans-serif;
+	    font-family: 'Baloo Bhaijaan', cursive;
+	      font-size: 48px;}
+				.forms{
+		      font-family: 'Baloo Bhaijaan', cursive;
+				  font-size: 20px;
+					margin:0 auto;
+					text-align:center;
+				}
+		      .icons{
+		      font-family: 'Oswald', sans-serif;
+		      font-size:15px;
+		      }
+					.heart{text-align: center;}
+
+				</style>
+	</head>
+	<body class="is-loading">
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">CHONG XU</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+              <li><a href="lab1.html">lab 1</a></li>
+							<li><a href="lab2.html">Lab 2</a></li>
+							<li class="active"><a href="lab3.html">lab 3</a></li>
+							<li><a href="lab4.html">lab 4</a></li>
+							<li><a href="lab5.html">Lab 5</a></li>
+							<li><a href="lab6.html">lab 6</a></li>
+							<li><a href="lab7.html">lab 7</a></li>
+							<li><a href="lab8.html">lab 8</a></li>
+						</ul>
+							<ul class="icons">
+							      <li><a href="../index.html"><span class="label">Home</span></a></li>
+										<li><a href="../projects.html"><span class="label">Projects</span></a></li>
+										<li><a href="../artworks.html">Art Works</a></li>
+										<li><a href="../about.html">About Me</a></li>
+										<li><a href="../contact.html">Contact</a></li>
+									</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">CHONG XU</span>
+									<h1>LAB 3<br />
+									The Credit Card Validator</h1>
+									<p> Simple function called validateCreditCard that returns true or false.</p>
+								</header>
+								<div class="image main"><img src="" alt="" />
+								<form name='calcform' id='myform'>
+								<ul class="forms" style="list-style-type:none">
+								<li>Number must be 16 digits, all of them must be numbers.</li>
+								<li>You must have at least two different digits represented (all of the digits cannot be the same).</li>
+								<li>The final digit must be even.</li>
+								<li>The sum of all the digits must be greater than 16 </li>
+		                <li>Credit Card Number: <input  class= "cardno" type='text' placeholder= "please enter 16 digits" name='cardno' id='credit'/> </li>
+		                <!--Expiration Date <input type='text' name='ename' id='expdate' /> </p>-->
+		               <li> <input type='button' name='confirm' value='Confirm My Number' onclick='validateCreditCard();'/></li>
+							</ul>
+							  </form>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+						<footer id="footer">
+							<section class="heart">
+		  				<h3>Hope You Enjoy Today On My Webside. <i class="icon alt fa-heart"></i></h3>
+							<P>Know more about me and let me know more about you, feel free to <a target="_blank" href="../contact.html">Contact Me</a>. I will contact you soon. Thank you so much. </p>
+
+							</section>
+							<section class="split contact" style="text-align: center;">
+								<section>
+									<ul class="icons alt">
+										<li><a target="_blank" href="https://twitter.com/cara_hsu" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a target="_blank"  href="https://www.facebook.com/profile.php?id=100010309506207" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a target="_blank" href="https://www.instagram.com/maxi_hsu/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a target="_blank" href="https://github.com/MaxiXu" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+										<li><a target="_blank" href="https://www.linkedin.com/in/chong-xu-2b1091136/" class="icon alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</section>
+							</section>
+						</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul>
+							<li>Copyright&copy; Chong Xu 2017All Rights Reserved.</li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+		<script>
+    var c1 = '9999-9999-8888-0000'; //valid
+    var c2 = '6666-6666-6666-1666'; //valid
+    var c3 = 'a923-3221-9c01-4444'; //invaild characters
+    var c4 = '4444-4444-4444-4444'; //only one type of number
+    var c5 = '1111-1111-1111-1110'; // sum less than 16
+    var c6 = '6666-6666-6666-6661'; // odd final number
+
+      function validateCreditCard()
+      {
+            var oform = document.forms['myform'];
+            var cardNumber = oform.elements['credit'].value;
+            //var expDate = oform.elements['expdate'].value;
+
+            var tot = "Your credit number is " + cardNumber + ", " + "please confirm it.";
+
+       // *** To get the last number on the card.
+
+            var lastNum=cardNumber.substr(cardNumber.length-1,1);//last number of the card
+            console.log(lastNum); // last Num
+
+            // get the arr of all the card no.
+            var arrCardNo=cardNumber.substr(0,cardNumber.length);//all the number that typed
+            var newArr=new Array();
+
+            for(var i=arrCardNo.length-1;i>-1;i--){    //arr for the first 15 number;
+
+                newArr.push(parseInt(arrCardNo.substr(i,1)));
+                var noOrder = newArr.reverse();
+            }
+
+       // *** the sum of all the number, Must bigger than 16
+            var sum = noOrder.reduce(function (a, b) {
+              return a + b;}, 0);
+            console.log(sum);
+
+      // ***  Can't be on type of number
+          var deduped = noOrder.filter(function (el, i, arr) {
+              return arr.indexOf(el) === i;
+            });
+            console.log(deduped.length);
+
+
+
+
+
+        // *** invalid characters, all numbers
+            var num = /^\d*$/; //all numbers
+
+        // *** invalid characters && Must be 16 dights && even final number && sum bigger than 16 && Can't be on type of number
+            if (num.exec(cardNumber) && cardNumber.length == 16 && lastNum % 2 == 0 && sum >16 && deduped.length >1){
+              confirm(tot)
+              console.log(tot);
+              alert("Thank you so much for you information!")
+
+              return true;
+              }
+              else{
+              alert("Please enter a vaild credit number!")
+              //console.log(cardno);
+              return false;
+              }
+
+          }
+
+    </script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

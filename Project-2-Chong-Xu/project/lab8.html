@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Project-Lab1</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/option.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		    <style>
+		      .icons{
+		      font-family: 'Oswald', sans-serif;
+		      font-size:15px;
+		      }
+					.heart{text-align: center;}
+				</style>
+	</head>
+	<body class="is-loading">
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">CHONG XU</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+              <li><a href="lab1.html">lab 1</a></li>
+							<li><a href="lab2.html">Lab 2</a></li>
+							<li><a href="lab3.html">lab 3</a></li>
+							<li><a href="lab4.html">lab 4</a></li>
+							<li><a href="lab5.html">Lab 5</a></li>
+							<li><a href="lab6.html">lab 6</a></li>
+							<li><a href="lab7.html">lab 7</a></li>
+							<li class="active"><a href="lab8.html">lab 8</a></li>
+						</ul>
+							<ul class="icons">
+							      <li><a href="../index.html"><span class="label">Home</span></a></li>
+										<li><a href="../projects.html"><span class="label">Projects</span></a></li>
+										<li><a href="../artworks.html">Art Works</a></li>
+										<li><a href="../about.html">About Me</a></li>
+										<li><a href="../contact.html">Contact</a></li>
+									</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">CHONG XU</span>
+									<h1>LAB 8<br />
+									Options</h1>
+									<p>Choose a city of Japan,let's take a look at the city's information and the famous food.</p>
+								</header>
+								<div class=""><img src="" alt="" />
+									<div class="outer-wrapper">
+										<header class="clearfix">
+											<select id="city-list">
+												<option value="f1">Tokyo</option>
+												<option value="s11">Kyoto</option>
+												<option value="s12">Osaka</option>
+												<option value="s13">Nagoya</option>
+												<option value="s14">Kobe</option>
+												<option value="s15">Yokohama</option>
+												<option value="s16">Fukuoka</option>
+												<option value="s17">Sapporo</option>
+												<option value="s21">Nara</option>
+												<option value="s22">Hiroshima</option>
+												<option value="s23">Kitakyushu</option>
+												<option value="s24">Sendai</option>
+												<option value="s25">Nagasaki</option>
+												<option value="s26">Kanazawa</option>
+												<option value="s27">Shinjuku</option>
+
+											</select>
+										</header>
+
+										<div class="main clearfix">
+											<div class="img-holder">
+												<div>
+													<img id="info-pic" src="images/f1.jpg" alt="" width="260" height="260">
+													<p id="info-name">The food of Japan</p>
+												</div>
+											</div>
+											<div class="info-holder">
+												<p><strong>City: </strong><span id="info-city">Tokyo</span></p>
+									     <br>
+												<p><strong>Area: </strong><span id="info-area">845 mi²</span></p>
+											<br>
+												<p><strong>Local Time: </strong><span id="info-local">Wednesday 12:48 PM</span></p>
+											<br>
+												<p><strong>Population: </strong><span id="info-pop">9.273 million (2015)</span></p>
+											</br>
+												<p><strong>Island: </strong><span id="info-island">Honshu</span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+						<footer id="footer">
+							<section class="heart">
+		  				<h3>Hope You Enjoy Today On My Webside. <i class="icon alt fa-heart"></i></h3>
+							<P>Know more about me and let me know more about you, feel free to <a target="_blank" href="../contact.html">Contact Me</a>. I will contact you soon. Thank you so much. </p>
+
+							</section>
+							<section class="split contact" style="text-align: center;">
+								<section>
+									<ul class="icons alt">
+										<li><a target="_blank" href="https://twitter.com/cara_hsu" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a target="_blank"  href="https://www.facebook.com/profile.php?id=100010309506207" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a target="_blank" href="https://www.instagram.com/maxi_hsu/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a target="_blank" href="https://github.com/MaxiXu" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+										<li><a target="_blank" href="https://www.linkedin.com/in/chong-xu-2b1091136/" class="icon alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</section>
+							</section>
+						</footer>
+
+							</div>
+						</div>
+					</div>-->
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul>
+							<li>Copyright&copy; Chong Xu 2017All Rights Reserved.</li>
+						</ul>
+					</div>
+
+			</div>
+     <script src="assets/js/city-data1.js"></script>
+		 <script>
+
+		  	document.getElementById('city-list').onchange = function() {
+		 		var selected = this.value;
+		 		document.getElementById('info-pic').src= 'images/'+selected+'.jpg';
+		     document.getElementById('info-city').textContent = cityData[this.value].city;
+		 		document.getElementById('info-area').textContent = cityData[this.value].area;
+		 		document.getElementById('info-local').textContent = cityData[this.value].localtime;
+		 		document.getElementById('info-pop').textContent = cityData[this.value].population;
+		 		document.getElementById('info-island').textContent = cityData[this.value].island;
+		 	};
+		 </script>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

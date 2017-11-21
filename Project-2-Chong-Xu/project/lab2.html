@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Project-Lab1</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu" rel="stylesheet"> <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+		<style>
+			  <style>
+				.t1 {font-family: 'Ubuntu', sans-serif;
+	    font-family: 'Baloo Bhaijaan', cursive;
+	      font-size: 48px;}
+
+				.forms{
+					font-family: 'Courgette', cursive;;
+				  font-size: 20px;
+
+						margin:0 auto;
+						text-align: center;
+				}
+
+					.icons{
+		      font-family: 'Oswald', sans-serif;
+		      font-size:15px;
+		      }
+					.heart{text-align: center;}
+				</style>
+	</head>
+	<body class="is-loading">
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">CHONG XU</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+              <li><a href="lab1.html">lab 1</a></li>
+							<li class="active"><a href="lab2.html">Lab 2</a></li>
+							<li><a href="lab3.html">lab 3</a></li>
+							<li><a href="lab4.html">lab 4</a></li>
+							<li><a href="lab5.html">Lab 5</a></li>
+							<li><a href="lab6.html">lab 6</a></li>
+							<li><a href="lab7.html">lab 7</a></li>
+							<li><a href="lab8.html">lab 8</a></li>
+						</ul>
+							<ul class="icons">
+							      <li><a href="../index.html"><span class="label">Home</span></a></li>
+										<li><a href="../projects.html"><span class="label">Projects</span></a></li>
+										<li><a href="../artworks.html">Art Works</a></li>
+										<li><a href="../about.html">About Me</a></li>
+										<li><a href="../contact.html">Contact</a></li>
+									</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">CHONG XU</span>
+									<h1>LAB 2<br />
+									The Cash Register</h1>
+									<p>The function called cashRegister that takes a shopping cart object. The object contains item names and prices and will return the total price of the shopping cart.</p>
+								</header>
+								<div class="image main"><img src="" alt="" />
+			             	<form name='calcform' id='myform'>
+											<ul class="forms" style="list-style-type:none">
+			               	<li>Shrimp 1/LB: <input type='text' name='bname' id='banana' /> </li>
+			                <li>Crab 1/LB: <input type='text' name='aname' id='apple' /> </li>
+			                <li>Watermelon 2/Each: <input type='text' name='hname' id='handker'/> </li>
+			               	<li>Lobster 10/Each: <input type='text' name='tname' id='Tshirt' /> </li>
+			                <li>Biscuit 10/Each: <input type='text' name='name' id='nalgene'/> </li>
+			               	<li>Protein Powder 22/Barrel: <input type='text' name='pname' id='protein' placeholder="sorry,we only have 5."/> </li>
+
+			               	<li><input type='button' name='calculate' value='Buy Now!!' onclick='calcuLate();'/></li>
+											<ul>
+			             	</form>
+
+							</section>
+							</div>
+
+					</div>
+
+				<!-- Footer -->
+						<footer id="footer">
+							<section class="heart">
+		  				<h3>Hope You Enjoy Today On My Webside. <i class="icon alt fa-heart"></i></h3>
+							<P>Know more about me and let me know more about you, feel free to <a target="_blank" href="../contact.html">Contact Me</a>. I will contact you soon. Thank you so much. </p>
+
+							</section>
+							<section class="split contact" style="text-align: center;">
+								<section>
+									<ul class="icons alt">
+										<li><a target="_blank" href="https://twitter.com/cara_hsu" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a target="_blank"  href="https://www.facebook.com/profile.php?id=100010309506207" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a target="_blank" href="https://www.instagram.com/maxi_hsu/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a target="_blank" href="https://github.com/MaxiXu" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+										<li><a target="_blank" href="https://www.linkedin.com/in/chong-xu-2b1091136/" class="icon alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									</ul>
+								</section>
+							</section>
+						</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul>
+							<li>Copyright&copy; Chong Xu 2017All Rights Reserved.</li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+		<script>
+
+      function calcuLate()
+     	{
+           	var oform = document.forms['myform'];
+           	var banana = oform.elements['banana'].value;
+            var apple = oform.elements['apple'].value;
+           	var handkerchief = oform.elements['handker'].value;
+            var tshirt = oform.elements['Tshirt'].value;
+           	var nalgene = oform.elements['nalgene'].value;
+           	var protein = oform.elements['protein'].value;
+            var b = banana * 1;
+            var a = apple * 1;
+            var h = handkerchief * 2;
+            var t = tshirt * 10;
+            var n = nalgene * 10;
+            var p = protein * 22;
+            var tot = b+a+h+t+n+p;
+            var total = "The total is $" + tot + " .";
+						if (protein >5) {
+							alert("Sorry, we only have 5 barrels of protein powder.");
+						}else{
+							confirm(total);
+						alert("Thank You So Much!");
+						console.log(el);
+						}
+
+
+					}
+		</script>
+   	</script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
